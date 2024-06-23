@@ -7,6 +7,7 @@ import type { TabsProps } from 'antd';
 import BitRateTab from './components/bit_rate_tab';
 import OFDMTab from './components/ofdm';
 import FlatPowerTab from './components/flat_power';
+import CsmaTab from './components/csma';
 
 
 const onChange = (key: string) => {
@@ -29,6 +30,11 @@ const items: TabsProps['items'] = [
     label: 'Power in Flat Environments',
     children: <FlatPowerTab />,
   },
+  {
+    key: '4',
+    label: 'CSMA/ALOHA',
+    children: <CsmaTab />,
+  }
 ];
 
 export default function Home() {

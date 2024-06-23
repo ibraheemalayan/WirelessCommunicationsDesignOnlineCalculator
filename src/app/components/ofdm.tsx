@@ -6,7 +6,7 @@ import {
 
 import { Descriptions } from 'antd';
 import { OFDMInputFormComponent } from './ofdm_form';
-import { bitsTxtFormatter, bpsTxtFormatter, hzTxtFormatter } from './functions';
+import { bitsTxtFormatter, bpsTxtFormatter, hzTxtFormatter, secTxtFormatter } from './functions';
 
 
 
@@ -65,7 +65,7 @@ export default function OFDMTab() {
                             <Descriptions.Item label="Bandwidth">{hzTxtFormatter(bandwidth)}</Descriptions.Item>
                             <Descriptions.Item label="Sub Carrier Spacing">{hzTxtFormatter(subCarrierSpacing)}</Descriptions.Item>
                             <Descriptions.Item label="OFDM Symbols">{ofdmSymbols} symbols</Descriptions.Item>
-                            <Descriptions.Item label="Symbol Duration">{symbolDuration} sec</Descriptions.Item>
+                            <Descriptions.Item label="Symbol Duration">{secTxtFormatter(symbolDuration)}</Descriptions.Item>
                             <Descriptions.Item label="Modulation">{qam_symbols}-QAM</Descriptions.Item>
                             <Descriptions.Item label="Parallel Blocks">{parallel_blocks}</Descriptions.Item>
                         </Descriptions>

@@ -7,7 +7,7 @@ import {
 import { Descriptions } from 'antd';
 import type { DescriptionsProps } from 'antd';
 import { BitRateInputFormComponent } from './bit_rate_form';
-import { hzTxtFormatter } from './functions';
+import { bitsTxtFormatter, hzTxtFormatter } from './functions';
 
 
 
@@ -60,17 +60,17 @@ export default function BitRateTab() {
                 samplingFrequency
               } level/sec</Descriptions.Item>
               <Descriptions.Item label="Quantizer Output In Bits">{
-                (samplingFrequency * quantizationBitsPerSample).toFixed(2)
-              } bit/sec</Descriptions.Item>
+                bitsTxtFormatter(samplingFrequency * quantizationBitsPerSample)
+              }</Descriptions.Item>
               <Descriptions.Item label="Source Encoder Output">{
-                (sourceEncoderRate * samplingFrequency * quantizationBitsPerSample).toFixed(2)
-              } bit/sec</Descriptions.Item>
+                bitsTxtFormatter(sourceEncoderRate * samplingFrequency * quantizationBitsPerSample)
+              } </Descriptions.Item>
               <Descriptions.Item label="Channel Encoder Output">{
-                (sourceEncoderRate * samplingFrequency * quantizationBitsPerSample / channelEncoderRate).toFixed(2)
-              } bit/sec</Descriptions.Item>
+                bitsTxtFormatter(sourceEncoderRate * samplingFrequency * quantizationBitsPerSample / channelEncoderRate)
+              } </Descriptions.Item>
               <Descriptions.Item label="Interleaver Output">{
-                (sourceEncoderRate * samplingFrequency * quantizationBitsPerSample / channelEncoderRate).toFixed(2)
-              } bit/sec</Descriptions.Item>
+                bitsTxtFormatter(sourceEncoderRate * samplingFrequency * quantizationBitsPerSample / channelEncoderRate)
+              } </Descriptions.Item>
             </Descriptions>
 
           </>

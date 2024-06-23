@@ -55,7 +55,7 @@ export const secondsFormatter = (value: number, unit: string) => {
         return `${(value * 1).toFixed(3)}`;
     } else if (unit === 'ms') {
         return `${(value * 1000).toFixed(3)}`;
-    } else if (unit === 'ns') {
+    } else if (unit === 'us') {
         return `${(value * 1000000).toFixed(1)}`;
     }
     return '';
@@ -66,7 +66,7 @@ export const secondsParser = (displayValue: string | undefined, unit: string) =>
     if (!displayValue) {
         return 0;
     }
-    if (unit === 'ns') {
+    if (unit === 'us') {
         return Number(displayValue) / 1000000;
     } else if (unit === 'ms') {
         return Number(displayValue) / 1000;
@@ -80,7 +80,7 @@ export const secondsUnitSelector = (setUnit: (unit: string) => void, initialUnit
     <Select defaultValue={initialUnit} style={{ width: 80 }} onChange={(unit) => setUnit(unit)}>
         <Option value="s" >s</Option>
         <Option value="ms" >ms</Option>
-        <Option value="ns" >ns</Option>
+        <Option value="us" >us</Option>
     </Select>
 );
 
@@ -178,6 +178,48 @@ export const bpsTxtFormatter = (value: number) => {
     }
 }
 
+// bits
+
+export const bitsFormatter = (value: number, unit: string) => {
+    if (!value) {
+        return '';
+    }
+    if (unit === 'bits') {
+        return `${value}`;
+    } else if (unit === 'Kb') {
+        return `${value / 1000}`;
+    } else if (unit === 'Mb') {
+        return `${value / 1000000}`;
+    } else if (unit === 'Gb') {
+        return `${value / 1000000000}`;
+    }
+    return '';
+}
+
+export const bitsParser = (displayValue: string | undefined, unit: string) => {
+    if (!displayValue) {
+        return 0;
+    }
+    if (unit === 'Gb') {
+        return Number(displayValue) * 1000000000;
+    } else if (unit === 'Mb') {
+        return Number(displayValue) * 1000000;
+    } else if (unit === 'Kb') {
+        return Number(displayValue) * 1000;
+    } else {
+        return Number(displayValue);
+    }
+}
+
+export const bitsUnitSelector = (setUnit: (unit: string) => void, initialUnit = 'bits') => (
+    <Select defaultValue={initialUnit} style={{ width: 80 }} onChange={(unit) => setUnit(unit)}>
+        <Option value="bits" >bits</Option>
+        <Option value="Kb" >Kb</Option>
+        <Option value="Mb" >Mb</Option>
+        <Option value="Gb" >Gb</Option>
+    </Select>
+);
+
 // convert value in bits to string with relevant units (bits, Kb, Mb, Gb)
 export const bitsTxtFormatter = (value: number) => {
     if (value < 1000) {
@@ -200,6 +242,16 @@ export const hzTxtFormatter = (value: number) => {
         return `${(value / 1000000).toFixed(2)} MHz`;
     } else {
         return `${(value / 1000000000).toFixed(2)} GHz`;
+    }
+}
+
+export const secTxtFormatter = (value: number) => {
+    if (value < 0.001) {
+        return `${value * 1000000} us`;
+    } else if (value < 1) {
+        return `${value * 1000} ms`;
+    } else {
+        return `${value} s`;
     }
 }
 
