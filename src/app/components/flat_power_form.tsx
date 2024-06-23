@@ -52,11 +52,11 @@ export const FlatPowerInputFormComponent: React.FC<InputFormProps> = (props) => 
 
     // -------------------- Path Loss and Frequency --------------------
 
-    const PATH_LOSS_INITIAL = 80; // Example: 80 dB
+    const PATH_LOSS_INITIAL = 140; // Example: 140 dB
     const [pathLoss, setPathLoss] = useState<number>(PATH_LOSS_INITIAL);
     const [pathLossUnit, setPathLossUnit] = useState<string>('dB');
 
-    const FREQUENCY_INITIAL = 900000000; // Example: 2400 MHz
+    const FREQUENCY_INITIAL = 900000000; // Example: 900 MHz
     const [frequency, setFrequency] = useState<number>(FREQUENCY_INITIAL);
     const [frequencyUnit, setFrequencyUnit] = useState<string>('MHz');
 
@@ -67,15 +67,15 @@ export const FlatPowerInputFormComponent: React.FC<InputFormProps> = (props) => 
     const [txAntennaGain, setTxAntennaGain] = useState<number>(TX_ANTENNA_GAIN_INITIAL);
     const [txAntennaGainUnit, setTxAntennaGainUnit] = useState<string>('dB');
 
-    const RX_ANTENNA_GAIN_INITIAL = 10; // Example: 10 dBi
+    const RX_ANTENNA_GAIN_INITIAL = 0; // Example: 10 dBi
     const [rxAntennaGain, setRxAntennaGain] = useState<number>(RX_ANTENNA_GAIN_INITIAL);
     const [rxAntennaGainUnit, setRxAntennaGainUnit] = useState<string>('dB');
 
-    const FEED_LINE_LOSS_INITIAL = 7; // Example: 2 dB
+    const FEED_LINE_LOSS_INITIAL = 12; // Example: 2 dB
     const [feedLineLoss, setFeedLineLoss] = useState<number>(FEED_LINE_LOSS_INITIAL);
     const [feedLineLossUnit, setFeedLineLossUnit] = useState<string>('dB');
 
-    const OTHER_LOSSES_INITIAL = 11; // Example: 1 dB
+    const OTHER_LOSSES_INITIAL = 20; // Example: 1 dB
     const [otherLosses, setOtherLosses] = useState<number>(OTHER_LOSSES_INITIAL);
     const [otherLossesUnit, setOtherLossesUnit] = useState<string>('dB');
 
@@ -86,11 +86,11 @@ export const FlatPowerInputFormComponent: React.FC<InputFormProps> = (props) => 
     const [dataRate, setDataRate] = useState<number>(DATA_RATE_INITIAL);
     const [dataRateUnit, setDataRateUnit] = useState<string>('Kbps'); // Or 'Gbps', 'kbps' as needed
 
-    const RX_AMP_GAIN_INITIAL = 28; // Example: 20 dB
+    const RX_AMP_GAIN_INITIAL = 24; // Example: 20 dB
     const [rxAmpGain, setRxAmpGain] = useState<number>(RX_AMP_GAIN_INITIAL);
     const [rxAmpGainUnit, setRxAmpGainUnit] = useState<string>('dB');
 
-    const TX_AMP_GAIN_INITIAL = 30; // Example: 30 dBm (dBm for power)
+    const TX_AMP_GAIN_INITIAL = 0; // Example: 30 dBm (dBm for power)
     const [txAmpGain, setTxAmpGain] = useState<number>(TX_AMP_GAIN_INITIAL);
     const [txAmpGainUnit, setTxAmpGainUnit] = useState<string>('dB');
 
@@ -108,7 +108,7 @@ export const FlatPowerInputFormComponent: React.FC<InputFormProps> = (props) => 
     const [fadeMargin, setFadeMargin] = useState<number>(FADE_MARGIN_INITIAL);
     const [fadeMarginUnit, setFadeMarginUnit] = useState<string>('dB');
 
-    const LINK_MARGIN_INITIAL = 6; // Example: 15 dB (calculated from other values, but here for completeness)
+    const LINK_MARGIN_INITIAL = 8; // Example: 15 dB (calculated from other values, but here for completeness)
     const [linkMargin, setLinkMargin] = useState<number>(LINK_MARGIN_INITIAL);
     const [linkMarginUnit, setLinkMarginUnit] = useState<string>('dB');
 

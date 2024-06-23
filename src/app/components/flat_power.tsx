@@ -99,27 +99,27 @@ export default function FlatPowerTab() {
                         <Descriptions title="Inputs" column={2}>
                             <Descriptions.Item label="Modulation Technique">{modulationTechnique}</Descriptions.Item>
                             <Descriptions.Item label="Bit Error Rate">{ber}</Descriptions.Item>
-                            <Descriptions.Item label="Path Loss">{pathLoss} db</Descriptions.Item>
+                            <Descriptions.Item label="Path Loss">{pathLoss.toFixed(2)} db</Descriptions.Item>
                             <Descriptions.Item label="Frequency">{hzTxtFormatter(frequency)}</Descriptions.Item>
-                            <Descriptions.Item label="Transmitter Antenna Gain">{txAntennaGain} db</Descriptions.Item>
-                            <Descriptions.Item label="Receiver Antenna Gain">{rxAntennaGain} db</Descriptions.Item>
-                            <Descriptions.Item label="Feed Line Loss">{feedLineLoss} db</Descriptions.Item>
-                            <Descriptions.Item label="Other Losses">{otherLosses} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitter Antenna Gain">{txAntennaGain.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Receiver Antenna Gain">{rxAntennaGain.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Feed Line Loss">{feedLineLoss.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Other Losses">{otherLosses.toFixed(2)} db</Descriptions.Item>
                             <Descriptions.Item label="Data Rate">{bpsTxtFormatter(dataRate)}</Descriptions.Item>
-                            <Descriptions.Item label="Receiver Amplifier Gain">{rxAmpGain} db</Descriptions.Item>
-                            <Descriptions.Item label="Transmitter Amplifier Gain">{txAmpGain} db</Descriptions.Item>
-                            <Descriptions.Item label="Total Noise Figure">{noiseFigureTotal} db</Descriptions.Item>
+                            <Descriptions.Item label="Receiver Amplifier Gain">{rxAmpGain.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitter Amplifier Gain">{txAmpGain.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Total Noise Figure">{noiseFigureTotal.toFixed(2)} db</Descriptions.Item>
                             <Descriptions.Item label="Noise Temperature">{noiseTemperature} K</Descriptions.Item>
-                            <Descriptions.Item label="Fade Margin">{fadeMargin} db</Descriptions.Item>
-                            <Descriptions.Item label="Link Margin">{linkMargin} db</Descriptions.Item>
+                            <Descriptions.Item label="Fade Margin">{fadeMargin.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Link Margin">{linkMargin.toFixed(2)} db</Descriptions.Item>
                         </Descriptions>
                         <Descriptions title="Results" column={1} bordered size='small'>
-                            <Descriptions.Item label="Eb/N0">{Eb_N0} db</Descriptions.Item>
-                            <Descriptions.Item label="Noise Temperature">{noiseTemperatureDb} db</Descriptions.Item>
-                            <Descriptions.Item label="Data Rate">{dataRateDb} db</Descriptions.Item>
-                            <Descriptions.Item label="Received Power">{power_received} db</Descriptions.Item>
-                            <Descriptions.Item label="Transmitted Power">{power_transmitted_in_db} db</Descriptions.Item>
-                            <Descriptions.Item label="Transmitted Power in Watt">{power_transmitted_in_watt} W</Descriptions.Item>
+                            <Descriptions.Item label="Eb/N0">{Eb_N0.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Noise Temperature">{noiseTemperatureDb.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Data Rate">{dataRateDb.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Received Power">{power_received.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitted Power">{power_transmitted_in_db.toFixed(2)} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitted Power in Watt">{power_transmitted_in_watt.toFixed(4)} W</Descriptions.Item>
                         </Descriptions>
 
                     </>

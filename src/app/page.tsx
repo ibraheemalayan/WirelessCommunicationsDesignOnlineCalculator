@@ -9,6 +9,7 @@ import OFDMTab from './components/ofdm';
 import FlatPowerTab from './components/flat_power';
 import CsmaTab from './components/csma';
 import CellularTab from './components/cellular';
+import CellularTab2 from './components/cellular_2';
 
 
 const onChange = (key: string) => {
@@ -39,8 +40,13 @@ const items: TabsProps['items'] = [
   {
     key: '5',
     label: 'Cellular System Design',
-    children: <CellularTab />,
-  }
+    children: <CellularTab2 />,
+  },
+  // {
+  //   key: '6',
+  //   label: 'Cellular System Design (OLD)',
+  //   children: <CellularTab />,
+  // }
 ];
 
 export default function Home() {

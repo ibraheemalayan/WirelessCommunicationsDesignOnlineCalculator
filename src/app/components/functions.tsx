@@ -288,23 +288,25 @@ export function getEbNo(ber: number, scheme: string) {
 export function findClusterSize(cellsPerCluster: number) {
     let minClusterSize = Math.ceil(cellsPerCluster);
     for (let i = 0; i <= minClusterSize; i++) {
-        for (let j = 0; j <= i; j++) {
+        for (let j = 0; j <= i + 5; j++) {
             let N = i * i + i * j + j * j;
             if (N >= minClusterSize) {
-                return N;
+                return [N, i, j];
             }
         }
     }
-    return minClusterSize; // Default return if no match found (shouldn't happen)
+    window.alert("Error in finding cluster size");
+    return [0, 0, 0];
 }
 
 export function erlangBLookup(load: number, drop_prb: number) {
 
     console.log(load);
     const indx = probs.indexOf(drop_prb) + 1;
+
     for (let i = 0; i < ErlangDropData.length; i++) {
         if (ErlangDropData[i][indx] >= load) {
-            return i;
+            return ErlangDropData[i][0];
         }
     }
     return ErlangDropData.length + 1;

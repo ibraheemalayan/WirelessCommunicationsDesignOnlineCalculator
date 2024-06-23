@@ -48,8 +48,8 @@ export const BitRateInputFormComponent: React.FC<InputFormProps> = (props) => {
   // -------------------- Quantization Levels & Bits --------------------
   const [useQuantizationLevels, setUseQuantizationLevels] = useState<boolean>(true);
 
-  const QUANTIAZATION_LEVEL_INITIAL = 2;
-  const QUANTIZATION_BITS_INITIAL = 1;
+  const QUANTIAZATION_LEVEL_INITIAL = 8;
+  const QUANTIZATION_BITS_INITIAL = 3;
   const [quantization_levels, _setQuantizationLevels] = useState<number>(QUANTIAZATION_LEVEL_INITIAL);
   const [quantization_bits, _setQuantizationBits] = useState<number>(QUANTIZATION_BITS_INITIAL);
 
