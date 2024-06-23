@@ -7,9 +7,10 @@ import {
 import { Descriptions } from 'antd';
 import type { DescriptionsProps } from 'antd';
 import { FlatPowerInputFormComponent } from './flat_power_form';
-import { bpsTxtFormatter, hzTxtFormatter } from './functions';
+import { bpsTxtFormatter, hzTxtFormatter, getEbNo } from './functions';
 
 
+// 
 
 
 export default function FlatPowerTab() {
@@ -17,7 +18,7 @@ export default function FlatPowerTab() {
     const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
     // state
-    const [modulationTechnique, setModulationTechnique] = useState<string>('');
+    const [modulationTechnique, setModulationTechnique] = useState<string>('8-PSK');
     const [ber, setBer] = useState<number>(0);
     const [pathLoss, setPathLoss] = useState<number>(0);
     const [frequency, setFrequency] = useState<number>(0);
@@ -68,6 +69,22 @@ export default function FlatPowerTab() {
         setLinkMargin(linkMargin);
         setIsSubmitted(true);
     }
+
+    const K = 10 * Math.log10(1.38e-23); // Boltzmann constant);
+
+    // calculations
+    const Eb_N0 = getEbNo(ber, modulationTechnique);
+
+    const noiseTemperatureDb = 10 * Math.log10(noiseTemperature);
+    const dataRateDb = 10 * Math.log10(dataRate);
+
+    const power_received = linkMargin + K + noiseTemperatureDb + noiseFigureTotal + dataRateDb + Eb_N0;
+
+    const power_transmitted_in_db = power_received + pathLoss + feedLineLoss + otherLosses + fadeMargin - txAntennaGain - txAmpGain - rxAntennaGain - rxAmpGain;
+
+    const power_transmitted_in_watt = Math.pow(10, power_transmitted_in_db / 10);
+
+
     return (
         <Flex justify='start' align='flex-start' vertical={false}>
             <section>
@@ -97,7 +114,12 @@ export default function FlatPowerTab() {
                             <Descriptions.Item label="Link Margin">{linkMargin} db</Descriptions.Item>
                         </Descriptions>
                         <Descriptions title="Results" column={1} bordered size='small'>
-                            <Descriptions.Item label="Sampler Output">{4} sample/sec </Descriptions.Item>
+                            <Descriptions.Item label="Eb/N0">{Eb_N0} db</Descriptions.Item>
+                            <Descriptions.Item label="Noise Temperature">{noiseTemperatureDb} db</Descriptions.Item>
+                            <Descriptions.Item label="Data Rate">{dataRateDb} db</Descriptions.Item>
+                            <Descriptions.Item label="Received Power">{power_received} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitted Power">{power_transmitted_in_db} db</Descriptions.Item>
+                            <Descriptions.Item label="Transmitted Power in Watt">{power_transmitted_in_watt} W</Descriptions.Item>
                         </Descriptions>
 
                     </>

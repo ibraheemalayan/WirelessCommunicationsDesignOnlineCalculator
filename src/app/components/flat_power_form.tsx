@@ -151,8 +151,8 @@ export const FlatPowerInputFormComponent: React.FC<InputFormProps> = (props) => 
                 <Form.Item initialValue={MODULATION_TECHNIQUE_INITIAL} label="Modulation Technique" name="modulation_technique" rules={[{ required: true }]}>
                     <Select value={modulationTechnique} style={{ width: 160 }} onChange={(value) => setModulationTechnique(value)}>
                         <Option value="BPSK/QPSK" >BPSK/QPSK</Option>
-                        <Option value="8-QAM" >8-QAM</Option>
-                        <Option value="16-QAM" >16-QAM</Option>
+                        <Option value="8-PSK" >8-PSK</Option>
+                        <Option value="16-PSK" >16-PSK</Option>
                     </Select>
                 </Form.Item>
 
