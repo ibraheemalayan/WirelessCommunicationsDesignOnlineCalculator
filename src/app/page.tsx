@@ -8,6 +8,7 @@ import BitRateTab from './components/bit_rate_tab';
 import OFDMTab from './components/ofdm';
 import FlatPowerTab from './components/flat_power';
 import CsmaTab from './components/csma';
+import CellularTab from './components/cellular';
 
 
 const onChange = (key: string) => {
@@ -34,6 +35,11 @@ const items: TabsProps['items'] = [
     key: '4',
     label: 'CSMA/ALOHA',
     children: <CsmaTab />,
+  },
+  {
+    key: '5',
+    label: 'Cellular System Design',
+    children: <CellularTab />,
   }
 ];
 

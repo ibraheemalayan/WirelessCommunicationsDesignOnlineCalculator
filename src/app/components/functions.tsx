@@ -1,6 +1,7 @@
 import {
     Select
 } from 'antd';
+import { erlangBTable as ErlangDropData, probabilities as probs } from './data';
 
 
 // fomrat Hz and KHz
@@ -51,7 +52,9 @@ export const secondsFormatter = (value: number, unit: string) => {
     if (!value) {
         return '';
     }
-    if (unit === 's') {
+    if (unit === 'min') {
+        return `${(value / 60).toFixed(3)}`;
+    } else if (unit === 's') {
         return `${(value * 1).toFixed(3)}`;
     } else if (unit === 'ms') {
         return `${(value * 1000).toFixed(3)}`;
@@ -70,14 +73,17 @@ export const secondsParser = (displayValue: string | undefined, unit: string) =>
         return Number(displayValue) / 1000000;
     } else if (unit === 'ms') {
         return Number(displayValue) / 1000;
-    } else {
+    } else if (unit === 's') {
         return Number(displayValue);
+    } else { // min
+        return Number(displayValue) * 60;
     }
 };
 
 // seconds select that takes a function to set the unit
 export const secondsUnitSelector = (setUnit: (unit: string) => void, initialUnit = 's') => (
     <Select defaultValue={initialUnit} style={{ width: 80 }} onChange={(unit) => setUnit(unit)}>
+        <Option value="min" >min</Option>
         <Option value="s" >s</Option>
         <Option value="ms" >ms</Option>
         <Option value="us" >us</Option>
@@ -256,7 +262,6 @@ export const secTxtFormatter = (value: number) => {
 }
 
 
-
 export function getEbNo(ber: number, scheme: string) {
     // Data initialization (replace with your actual data)
     const data: { [key: string]: number[] } = {
@@ -278,4 +283,29 @@ export function getEbNo(ber: number, scheme: string) {
     }
 
     return closestIndex !== -1 ? data["Eb/No [dB]"][closestIndex] : 0;
+}
+
+export function findClusterSize(cellsPerCluster: number) {
+    let minClusterSize = Math.ceil(cellsPerCluster);
+    for (let i = 0; i <= minClusterSize; i++) {
+        for (let j = 0; j <= i; j++) {
+            let N = i * i + i * j + j * j;
+            if (N >= minClusterSize) {
+                return N;
+            }
+        }
+    }
+    return minClusterSize; // Default return if no match found (shouldn't happen)
+}
+
+export function erlangBLookup(load: number, drop_prb: number) {
+
+    console.log(load);
+    const indx = probs.indexOf(drop_prb) + 1;
+    for (let i = 0; i < ErlangDropData.length; i++) {
+        if (ErlangDropData[i][indx] >= load) {
+            return i;
+        }
+    }
+    return ErlangDropData.length + 1;
 }
