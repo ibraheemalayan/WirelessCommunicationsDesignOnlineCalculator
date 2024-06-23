@@ -8,29 +8,49 @@ TODO: Add a lot of screenshots
 
 ## Installation
 
-First, clone the repository:
+- Install [Node.js](https://nodejs.org/en/download/) if you haven't already.
 
-```bash
-git clone https://github.com/ibraheemalayan/WirelessCommunicationsDesignOnlineCalculator
-```
+- Clone the repository:
 
-Then, install the dependencies:
+  ```bash
+  git clone https://github.com/ibraheemalayan/WirelessCommunicationsDesignOnlineCalculator
+  cd WirelessCommunicationsDesignOnlineCalculator
+  ```
 
-```bash
-cd WirelessCommunicationsDesignOnlineCalculator
-yarn install
-```
+- Install dependencies:
 
-Then, run the development server:
+  ```bash
+  npm install
+  ```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Run the development server:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  ```bash
+  npm run dev
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots
+
+The number of bits and rate of the sampler, quantizer, source encoder, channel encoder, and
+interleaver.
+
+![BitRate](./assets/BitRate.png)
+
+The number of bits and rate for resource elements, OFDM symbol, Resource Blocks, and
+maximum transmission using parallel resource blocks.
+
+![ResourceElements](./assets/OFDM.png)
+
+Power transmitted in a flat environment based on the transmitter and receiver specifications.
+
+![PowerTransmitted](./assets/PowerTransmitted.png)
+
+Throughput in percent of Multiple Access techniques.
+
+![Throughput](./assets/Throughput.png)
+
+Design of cellular system.
+
+![CellularSystem](./assets/CellularSystem.png)
