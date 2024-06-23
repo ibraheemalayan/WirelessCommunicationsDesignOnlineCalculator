@@ -1,0 +1,57 @@
+1. 
+The user should enter the bandwidth of the signal(BW) and the number of bits for the quantizer(QB) and the compression rate for the source encoder (Rs) and the rate for the channel encoder (Rc) and the number of bits for the interleaver(Ri) .
+
+The calculations are :
+
+Sampling frequency --> fs = 2 * BW
+Number of Quantization levels --> L = 2 ^ (QB)
+input rate for the source encoder --> inputRateSourceEncoder = fs * (QB)
+Output rate for the source encoder --> outputRateSourceEncoder = inputRateSourceEncoder * (Rs)
+Output rate for the channel encoder --> outputRateChannelEncoder = outputRateSourceEncoder / (Rc)
+Output rate for the interleaver --> outputRateInerleaver = outputRateChannelEncoder
+
+2.
+The user should enter the
+- bandwidth of each resource block (BW) and 
+- the subcarrier spacing (subcarrierSpacing) and
+- number of OFDM symbols per resource block (numSympols) and 
+- the duration for each resource block (resourceBlockDuration) and
+- number of distinct symbols in the modulation(distinctSymbols) and 
+- number of the parallel resource blocks that is assigned to the user (numParallelResourceBlocks) 
+
+(note1: the user should enter a value that it is power of 2 , e.g 4,8,16,32,64,128,256,512,1024,2048,4096 . You can use a menu here)
+(note2: must validate if the ratio between BW and subcarrierSpacing is an integer)
+(note3: i am not sure if the user should enter number of OFDM symbols per resource block or keep it constant that  equals 7 )
+
+The calculations are :
+
+number of bits per resource block --> numOfBitPerResourceBlock = log2(distinctSymbols)
+number of bits per OFDM symbol --> numOfBitPerOFDMSymbol =  numOfBitPerResourceBlock * (BW/subcarrierSpacing)
+number of bits  per OFDM resource block --> numOfBitPerOFDMResouceBlock = numOfBitPerOFDMSymbol * (numSympols)
+max transmission rate using parallel resource blocks --> maxRate = ( numParallelResourceBlocks * (numOfBitPerOFDMResouceBlock)) / (resourceBlockDuration)
+
+3.
+The user should enter the path loss (pathLoss) and the frequency(f) and the transmit antenna gain (Gt) and the receive antenna gain (Gr) and data rate (R) and antenna feed line loss (Lf) and other losses (Lo) and fade margin (Lfmargin) and receiver amplifier gain (Ar) and transmitter amplifier gain (At) (or we can keep it 0 in db) and noise figure total (NfTotal) and noise temperature (T) and link margin (LM) and a menu to choose between (8-PSK , BPSK/QPSK , 16-PSK) and the bit error rate (BER)
+(note1: the values could be in watt or db)
+(note2: convert all the values to db)
+(note3: K is constant equals -228.6 in db)
+
+The calculations are :
+total transmit power --> first we should get the value Eb/No from the figure or (from the equation ) , then calculates the value of the received power (Pr) , finally calculates the transmit power
+ the values are in db
+
+Pr = LM + K + T + NfTotal + R + Eb/No
+
+trasmitPower = Pr + pathloss + Lf + Lo + Lfmargin - Gt - Gr - At - Ar
+then convert trasmitPower to watt 
+
+
+4.
+ the user should enter the data transmission bandwidth (Rate)and to choose between (unslotted nonpersistent CSMA , slotted nonpersistent CSMA , unslotted 1-persistent CSMA , etc. (note: Choose at least three from them))
+and the max signal propagation time (tau)  and the frame size(fSize) and the frame rate(g)
+The calculations are :
+The throughput --> to calculate it first we have to find the period for one bit (Tb = 1/Rate) then we have to find period for one frame (Tframe = fSize * Tb) , then we have to find the load (G) using this equation (G =  g * Tframe) , then we have to find alpha using (alpha = tau/Tframe) then apply the equation of the throughput according to the choice that the user chose (unslotted nonpersistent CSMA , slotted nonpersistent CSMA , unslotted 1-persistent CSMA , etc.) 
+the equations are in the midterm paper in the last page
+
+5.
+Homework (:

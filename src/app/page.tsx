@@ -4,7 +4,8 @@ import React from 'react';
 import { Tabs, Flex, Card } from 'antd';
 import type { TabsProps } from 'antd';
 
-import BitRateTab from './bit_rate_tab';
+import BitRateTab from './components/bit_rate_tab';
+import OFDMTab from './components/ofdm';
 
 
 const onChange = (key: string) => {
@@ -19,8 +20,8 @@ const items: TabsProps['items'] = [
   },
   {
     key: '2',
-    label: 'Tab 2',
-    children: 'Content of Tab Pane 2',
+    label: 'OFDM',
+    children: <OFDMTab />,
   },
   {
     key: '3',
@@ -35,7 +36,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center mb-8">Wireless Communications Calculator</h1>
       <Flex justify='center' align='flex-start' vertical>
 
-        <Card title="Select a calculater" bordered={false} style={{ width: 1000 }}>
+        <Card title="Select a calculater" bordered={false} style={{ width: 1200 }}>
           <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
         </Card>
 
