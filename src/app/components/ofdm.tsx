@@ -6,33 +6,10 @@ import {
 
 import { Descriptions } from 'antd';
 import { OFDMInputFormComponent } from './ofdm_form';
+import { bitsTxtFormatter, bpsTxtFormatter, hzTxtFormatter } from './functions';
 
 
-// convert value in bps to string with relevant units (bps, Kbps, Mbps, Gbps) 
-const bpsFormatter = (value: number) => {
-    if (value < 1000) {
-        return `${value} bps`;
-    } else if (value < 1000000) {
-        return `${(value / 1000).toFixed(2)} Kbps`;
-    } else if (value < 1000000000) {
-        return `${(value / 1000000).toFixed(2)} Mbps`;
-    } else {
-        return `${(value / 1000000000).toFixed(2)} Gbps`;
-    }
-}
 
-// convert value in bits to string with relevant units (bits, Kb, Mb, Gb)
-const bitsFormatter = (value: number) => {
-    if (value < 1000) {
-        return `${value} bit`;
-    } else if (value < 1000000) {
-        return `${(value / 1000).toFixed(2)} Kb`;
-    } else if (value < 1000000000) {
-        return `${(value / 1000000).toFixed(2)} Mb`;
-    } else {
-        return `${(value / 1000000000).toFixed(2)} Gb`;
-    }
-}
 
 export default function OFDMTab() {
 
@@ -85,19 +62,19 @@ export default function OFDMTab() {
                 {isSubmitted ? (
                     <>
                         <Descriptions title="Inputs" column={2}>
-                            <Descriptions.Item label="Bandwidth">{bandwidth} Hz</Descriptions.Item>
-                            <Descriptions.Item label="Sub Carrier Spacing">{subCarrierSpacing} Hz</Descriptions.Item>
+                            <Descriptions.Item label="Bandwidth">{hzTxtFormatter(bandwidth)}</Descriptions.Item>
+                            <Descriptions.Item label="Sub Carrier Spacing">{hzTxtFormatter(subCarrierSpacing)}</Descriptions.Item>
                             <Descriptions.Item label="OFDM Symbols">{ofdmSymbols} symbols</Descriptions.Item>
                             <Descriptions.Item label="Symbol Duration">{symbolDuration} sec</Descriptions.Item>
                             <Descriptions.Item label="Modulation">{qam_symbols}-QAM</Descriptions.Item>
                             <Descriptions.Item label="Parallel Blocks">{parallel_blocks}</Descriptions.Item>
                         </Descriptions>
                         <Descriptions title="Results" column={1} bordered size='small'>
-                            <Descriptions.Item label="Number of Bits per Resource Block">{bitsFormatter(number_of_bits_per_resource_block)}</Descriptions.Item>
+                            <Descriptions.Item label="Number of Bits per Resource Block">{bitsTxtFormatter(number_of_bits_per_resource_block)}</Descriptions.Item>
                             <Descriptions.Item label="Number of Subcarriers">{number_of_subcarriers}</Descriptions.Item>
-                            <Descriptions.Item label="Number of Bits per Symbol">{bitsFormatter(number_of_bits_per_symbol)}</Descriptions.Item>
-                            <Descriptions.Item label="Number of Bits per OFDM Resource Block">{bitsFormatter(number_of_bits_per_ofdm_resource_block)}</Descriptions.Item>
-                            <Descriptions.Item label="Maximum Transmission Rate per Resource Block">{bpsFormatter(maximum_transmission_rate_per_resource_block)}</Descriptions.Item>
+                            <Descriptions.Item label="Number of Bits per Symbol">{bitsTxtFormatter(number_of_bits_per_symbol)}</Descriptions.Item>
+                            <Descriptions.Item label="Number of Bits per OFDM Resource Block">{bitsTxtFormatter(number_of_bits_per_ofdm_resource_block)}</Descriptions.Item>
+                            <Descriptions.Item label="Maximum Transmission Rate per Resource Block">{bpsTxtFormatter(maximum_transmission_rate_per_resource_block)}</Descriptions.Item>
 
 
                         </Descriptions>

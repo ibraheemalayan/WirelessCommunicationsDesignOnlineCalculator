@@ -7,6 +7,7 @@ import {
 import { Descriptions } from 'antd';
 import type { DescriptionsProps } from 'antd';
 import { BitRateInputFormComponent } from './bit_rate_form';
+import { hzTxtFormatter } from './functions';
 
 
 
@@ -44,7 +45,7 @@ export default function BitRateTab() {
         {isSubmitted ? (
           <>
             <Descriptions title="Inputs" column={2}>
-              <Descriptions.Item label="Sampling Frequency">{samplingFrequency} Hz</Descriptions.Item>
+              <Descriptions.Item label="Sampling Frequency">{hzTxtFormatter(samplingFrequency)}</Descriptions.Item>
               <Descriptions.Item label="Quantization Bits">{quantizationBitsPerSample} bit/sample</Descriptions.Item>
               <Descriptions.Item label="Source Encoder Rate">{sourceEncoderRate}</Descriptions.Item>
               <Descriptions.Item label="Channel Encoder Rate">{channelEncoderRate}</Descriptions.Item>

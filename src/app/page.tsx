@@ -6,6 +6,7 @@ import type { TabsProps } from 'antd';
 
 import BitRateTab from './components/bit_rate_tab';
 import OFDMTab from './components/ofdm';
+import FlatPowerTab from './components/flat_power';
 
 
 const onChange = (key: string) => {
@@ -25,8 +26,8 @@ const items: TabsProps['items'] = [
   },
   {
     key: '3',
-    label: 'Tab 3',
-    children: 'Content of Tab Pane 3',
+    label: 'Power in Flat Environments',
+    children: <FlatPowerTab />,
   },
 ];
 
@@ -42,7 +43,7 @@ export default function Home() {
 
       </Flex>
       <footer className="text-center text-sm mt-12 text-gray-600">
-        <p>&copy; 2024 Wireless Calculator, Birzeit University, Ibraheem Alyan & Adham Al Masri</p>
+        <p>&copy; 2024 Birzeit University, Ibraheem Alyan & Adham Dar Al Masri</p>
       </footer>
     </main>
   );
