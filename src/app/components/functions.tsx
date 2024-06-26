@@ -253,11 +253,11 @@ export const hzTxtFormatter = (value: number) => {
 
 export const secTxtFormatter = (value: number) => {
     if (value < 0.001) {
-        return `${value * 1000000} us`;
+        return `${(value * 1000000).toFixed(2)} us`;
     } else if (value < 1) {
-        return `${value * 1000} ms`;
+        return `${(value * 1000).toFixed(2)} ms`;
     } else {
-        return `${value} s`;
+        return `${(value).toFixed(4)} s`;
     }
 }
 
