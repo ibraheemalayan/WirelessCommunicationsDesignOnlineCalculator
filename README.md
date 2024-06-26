@@ -53,4 +53,4 @@ Throughput in percent of Multiple Access techniques.
 
 Design of cellular system.
 
-![CellularSystem](./assets/CellularSystem.png)
+![CellularSystem](./assets/Cellular.png)
