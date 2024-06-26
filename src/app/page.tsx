@@ -42,11 +42,11 @@ const items: TabsProps['items'] = [
     label: 'Cellular System Design',
     children: <CellularTab2 />,
   },
-  {
-    key: '6',
-    label: 'Cellular System Design (OLD)',
-    children: <CellularTab />,
-  }
+  // {
+  //   key: '6',
+  //   label: 'Cellular System Design (OLD)',
+  //   children: <CellularTab />,
+  // }
 ];
 
 export default function Home() {
