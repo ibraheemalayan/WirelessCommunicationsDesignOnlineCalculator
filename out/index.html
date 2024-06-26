@@ -1,1 +1,737 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/6c49cee5532489e3.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-653a0787c4442713.js"/><script src="/_next/static/chunks/fd9d1056-35534068ac75990a.js" async=""></script><script src="/_next/static/chunks/23-200d2299eb1b621f.js" async=""></script><script src="/_next/static/chunks/main-app-77bc69d78dc798e4.js" async=""></script><script src="/_next/static/chunks/775-f5a13855b4be3c19.js" async=""></script><script src="/_next/static/chunks/app/page-2259586822b59086.js" async=""></script><title>Wireless Calculater</title><meta name="description" content="Automatically calculate wireless communication parameters"/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js" noModule=""></script></head><body class="__className_aaf875"><main class="flex flex-col min-h-screen text-center content-center items-center p-6"><h1 class="text-3xl font-bold text-center mb-8">Wireless Communications Calculator</h1><div class="ant-flex css-m4timi ant-flex-align-flex-start ant-flex-justify-center ant-flex-vertical"><div class="ant-card css-m4timi" style="width:1200px"><div class="ant-card-head"><div class="ant-card-head-wrapper"><div class="ant-card-head-title">Select a calculater</div></div></div><div class="ant-card-body"><div class="ant-tabs ant-tabs-top css-m4timi"><div role="tablist" class="ant-tabs-nav"><div class="ant-tabs-nav-wrap"><div class="ant-tabs-nav-list" style="transform:translate(0px, 0px)"><div data-node-key="1" class="ant-tabs-tab ant-tabs-tab-active"><div role="tab" aria-selected="true" class="ant-tabs-tab-btn" tabindex="0">Bit/Rate</div></div><div data-node-key="2" class="ant-tabs-tab"><div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">OFDM</div></div><div data-node-key="3" class="ant-tabs-tab"><div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">Power in Flat Environments</div></div><div data-node-key="4" class="ant-tabs-tab"><div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">CSMA/ALOHA</div></div><div data-node-key="5" class="ant-tabs-tab"><div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">Cellular System Design</div></div><div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"></div></div></div><div class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden"><button type="button" class="ant-tabs-nav-more" style="visibility:hidden;order:1" tabindex="-1" aria-hidden="true" aria-haspopup="listbox" aria-controls="null-more-popup" id="null-more" aria-expanded="false"><span role="img" aria-label="ellipsis" class="anticon anticon-ellipsis"><svg viewBox="64 64 896 896" focusable="false" data-icon="ellipsis" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"></path></svg></span></button></div></div><div class="ant-tabs-content-holder"><div class="ant-tabs-content ant-tabs-content-top"><div role="tabpanel" tabindex="0" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active"><div class="ant-flex css-m4timi ant-flex-align-flex-start ant-flex-justify-start"><section><div class="ant-row css-m4timi"><form style="width:600px" class="ant-form ant-form-horizontal css-m4timi"><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="use_nyquist_rate" class="" title="Use Nyquist Rate">Use Nyquist Rate</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div id="use_nyquist_rate" class="ant-row ant-row-middle css-m4timi"><label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked ant-checkbox-wrapper-in-form-item css-m4timi"><span class="ant-checkbox ant-wave-target css-m4timi ant-checkbox-checked"><input class="ant-checkbox-input" type="checkbox" checked=""/><span class="ant-checkbox-inner"></span></span><span>Calculate sampling frequency from bandwidth</span></label></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="bandwidth" class="ant-form-item-required" title="Bandwidth">Bandwidth</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="1000" id="bandwidth" aria-required="true" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number-group-wrapper ant-input-number-group-wrapper-outlined css-m4timi"><div class="ant-input-number-wrapper ant-input-number-group css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="1" aria-valuenow="1000" step="1" class="ant-input-number-input" value="1000"/></div></div><div class="ant-input-number-group-addon"><div class="ant-select ant-select-outlined css-m4timi ant-select-single ant-select-show-arrow" style="width:80px"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" readOnly="" unselectable="on" style="opacity:0" value=""/></span><span class="ant-select-selection-item" title="Hz">Hz</span></div><span class="ant-select-arrow" style="user-select:none;-webkit-user-select:none" unselectable="on" aria-hidden="true"><span role="img" aria-label="down" class="anticon anticon-down ant-select-suffix"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div></div></div></div></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="sampling_frequency" class="" title="Sampling Frequncy">Sampling Frequncy</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="2000" id="sampling_frequency" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number-group-wrapper ant-input-number-group-wrapper-disabled ant-input-number-group-wrapper-outlined css-m4timi"><div class="ant-input-number-wrapper ant-input-number-group css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined ant-input-number-disabled"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="1" aria-valuenow="2000" step="1" class="ant-input-number-input" disabled="" value="2000"/></div></div><div class="ant-input-number-group-addon"><div class="ant-select ant-select-outlined css-m4timi ant-select-single ant-select-show-arrow" style="width:80px"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" readOnly="" unselectable="on" style="opacity:0" value=""/></span><span class="ant-select-selection-item" title="Hz">Hz</span></div><span class="ant-select-arrow" style="user-select:none;-webkit-user-select:none" unselectable="on" aria-hidden="true"><span role="img" aria-label="down" class="anticon anticon-down ant-select-suffix"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div></div></div></div></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="quantization_levels" class="" title="Enter Quantization Levels">Enter Quantization Levels</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div id="quantization_levels" class="ant-row ant-row-middle css-m4timi"><label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked ant-checkbox-wrapper-in-form-item css-m4timi"><span class="ant-checkbox ant-wave-target css-m4timi ant-checkbox-checked"><input class="ant-checkbox-input" type="checkbox" checked=""/><span class="ant-checkbox-inner"></span></span><span>Calculate quantization bits from levels</span></label></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="quantization_levels" class="ant-form-item-required" title="Quantization Levels">Quantization Levels</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="8" id="quantization_levels" aria-required="true" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="2" aria-valuenow="8" step="1" class="ant-input-number-input" value="8"/></div></div><span style="margin-left:10px">level</span></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="quantization_bits" class="" title="Quantization Bits Per Sample">Quantization Bits Per Sample</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="3" id="quantization_bits" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined ant-input-number-disabled"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="1" aria-valuenow="3" step="1" class="ant-input-number-input" disabled="" value="3"/></div></div><span style="margin-left:10px"> bits/sample</span></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="source_encoder_compression_rate" class="ant-form-item-required" title="Source Encoder Compression Rate">Source Encoder Compression Rate</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="0.4" id="source_encoder_compression_rate" aria-required="true" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="0.001" aria-valuemax="1" aria-valuenow="0.4" step="0.01" class="ant-input-number-input" value="0.40"/></div></div><span style="margin-left:10px"> input/output</span></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi"><label for="channel_encoder_rate" class="ant-form-item-required" title="Channel Encoder Rate">Channel Encoder Rate</label></div><div class="ant-col ant-col-14 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><div value="0.8" id="channel_encoder_rate" aria-required="true" class="ant-row ant-row-middle css-m4timi"><div class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined"><div class="ant-input-number-handler-wrap"><span unselectable="on" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up"><span role="img" aria-label="up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></span></span><span unselectable="on" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down"><span role="img" aria-label="down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></span></div><div class="ant-input-number-input-wrap"><input autoComplete="off" role="spinbutton" aria-valuemin="0.001" aria-valuemax="1" aria-valuenow="0.8" step="0.01" class="ant-input-number-input" value="0.80"/></div></div><span style="margin-left:10px"> output/input</span></div></div></div></div></div></div><div class="ant-form-item css-m4timi"><div class="ant-row ant-form-item-row css-m4timi"><div class="ant-col ant-col-16 ant-col-offset-4 ant-form-item-control css-m4timi"><div class="ant-form-item-control-input"><div class="ant-form-item-control-input-content"><button type="submit" class="ant-btn css-m4timi ant-btn-primary ant-btn-lg"><span class="ant-btn-icon"><span role="img" aria-label="calculator" class="anticon anticon-calculator"><svg viewBox="64 64 896 896" focusable="false" data-icon="calculator" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M251.2 387H320v68.8c0 1.8 1.8 3.2 4 3.2h48c2.2 0 4-1.4 4-3.3V387h68.8c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H376v-68.8c0-1.8-1.8-3.2-4-3.2h-48c-2.2 0-4 1.4-4 3.2V331h-68.8c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm328 0h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 265h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 104h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm-195.7-81l61.2-74.9c4.3-5.2.7-13.1-5.9-13.1H388c-2.3 0-4.5 1-5.9 2.9l-34 41.6-34-41.6a7.85 7.85 0 00-5.9-2.9h-50.9c-6.6 0-10.2 7.9-5.9 13.1l61.2 74.9-62.7 76.8c-4.4 5.2-.8 13.1 5.8 13.1h50.8c2.3 0 4.5-1 5.9-2.9l35.5-43.5 35.5 43.5c1.5 1.8 3.7 2.9 5.9 2.9h50.8c6.6 0 10.2-7.9 5.9-13.1L383.5 675zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-36 732H180V180h664v664z"></path></svg></span></span><span>Submit</span></button></div></div></div></div></div></form><div class="ant-divider css-m4timi ant-divider-vertical" role="separator"></div></div></section><div class="ant-divider css-m4timi ant-divider-vertical" role="separator"></div><section><div class="ant-descriptions css-m4timi"><div class="ant-descriptions-header"><div class="ant-descriptions-title">Results</div></div><div class="ant-descriptions-view"><table><tbody><tr class="ant-descriptions-row"><td class="ant-descriptions-item" colSpan="2"><div class="ant-descriptions-item-container"><span class="ant-descriptions-item-content">Submit the form to see the results</span></div></td></tr></tbody></table></div></div></section></div></div></div></div></div></div></div></div><footer class="text-center text-sm mt-12 text-gray-600"><p>© 2024 Birzeit University, Ibraheem Alyan &amp; Adham Dar Al Masri</p></footer></main><script src="/_next/static/chunks/webpack-653a0787c4442713.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/6c49cee5532489e3.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[5751,[],\"\"]\n5:I[6513,[],\"ClientPageRoot\"]\n6:I[5553,[\"775\",\"static/chunks/775-f5a13855b4be3c19.js\",\"931\",\"static/chunks/app/page-2259586822b59086.js\"],\"default\"]\n7:I[9275,[],\"\"]\n8:I[1343,[],\"\"]\na:I[6130,[],\"\"]\nb:[]\n"])</script><script>self.__next_f.push([1,"0:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6c49cee5532489e3.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L3\",null,{\"buildId\":\"WAm_BuJGCZqIRgeXFcUoi\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L4\",[\"$\",\"$L5\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$6\"}]],null],null]},[[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__className_aaf875\",\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":null}]}]}],null],null],\"couldBeIntercepted\":false,\"initialHead\":[false,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]]\n"])</script><script>self.__next_f.push([1,"9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"Wireless Calculater\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Automatically calculate wireless communication parameters\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n4:null\n"])</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/calculator/wireless_systems/statics/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2"
+        as="font" crossorigin="" type="font/woff2" />
+    <link rel="stylesheet" href="/calculator/wireless_systems/statics/_next/static/css/6b894eb179a7507d.css"
+        data-precedence="next" />
+    <link rel="preload" as="script" fetchPriority="low"
+        href="/calculator/wireless_systems/statics/_next/static/chunks/webpack-f975f47b3522e584.js" />
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/fd9d1056-35534068ac75990a.js"
+        async=""></script>
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/23-437b2cd9fba9f6ed.js" async=""></script>
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/main-app-77bc69d78dc798e4.js"
+        async=""></script>
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/775-f5a13855b4be3c19.js" async=""></script>
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/app/page-a9d922b6dd23cfb4.js"
+        async=""></script>
+    <title>Wireless Calculater</title>
+    <meta name="description" content="Automatically calculate wireless communication parameters" />
+    <link rel="icon" href="/calculator/wireless_systems/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <meta name="next-size-adjust" />
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"
+        noModule=""></script>
+</head>
+
+<body class="__className_829c0e">
+    <main class="flex flex-col min-h-screen text-center content-center items-center p-6">
+        <h1 class="text-3xl font-bold text-center mb-8">Wireless Communications Calculator</h1>
+        <div class="ant-flex css-m4timi ant-flex-align-flex-start ant-flex-justify-center ant-flex-vertical">
+            <div class="ant-card css-m4timi" style="width:1200px">
+                <div class="ant-card-head">
+                    <div class="ant-card-head-wrapper">
+                        <div class="ant-card-head-title">Select a calculater</div>
+                    </div>
+                </div>
+                <div class="ant-card-body">
+                    <div class="ant-tabs ant-tabs-top css-m4timi">
+                        <div role="tablist" class="ant-tabs-nav">
+                            <div class="ant-tabs-nav-wrap">
+                                <div class="ant-tabs-nav-list" style="transform:translate(0px, 0px)">
+                                    <div data-node-key="1" class="ant-tabs-tab ant-tabs-tab-active">
+                                        <div role="tab" aria-selected="true" class="ant-tabs-tab-btn" tabindex="0">
+                                            Bit/Rate</div>
+                                    </div>
+                                    <div data-node-key="2" class="ant-tabs-tab">
+                                        <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">OFDM
+                                        </div>
+                                    </div>
+                                    <div data-node-key="3" class="ant-tabs-tab">
+                                        <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">
+                                            Power in Flat Environments</div>
+                                    </div>
+                                    <div data-node-key="4" class="ant-tabs-tab">
+                                        <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">
+                                            CSMA/ALOHA</div>
+                                    </div>
+                                    <div data-node-key="5" class="ant-tabs-tab">
+                                        <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">
+                                            Cellular System Design</div>
+                                    </div>
+                                    <div data-node-key="6" class="ant-tabs-tab">
+                                        <div role="tab" aria-selected="false" class="ant-tabs-tab-btn" tabindex="0">
+                                            Cellular System Design (OLD)</div>
+                                    </div>
+                                    <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"></div>
+                                </div>
+                            </div>
+                            <div class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden"><button type="button"
+                                    class="ant-tabs-nav-more" style="visibility:hidden;order:1" tabindex="-1"
+                                    aria-hidden="true" aria-haspopup="listbox" aria-controls="null-more-popup"
+                                    id="null-more" aria-expanded="false"><span role="img" aria-label="ellipsis"
+                                        class="anticon anticon-ellipsis"><svg viewBox="64 64 896 896" focusable="false"
+                                            data-icon="ellipsis" width="1em" height="1em" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z">
+                                            </path>
+                                        </svg></span></button></div>
+                        </div>
+                        <div class="ant-tabs-content-holder">
+                            <div class="ant-tabs-content ant-tabs-content-top">
+                                <div role="tabpanel" tabindex="0" aria-hidden="false"
+                                    class="ant-tabs-tabpane ant-tabs-tabpane-active">
+                                    <div class="ant-flex css-m4timi ant-flex-align-flex-start ant-flex-justify-start">
+                                        <section>
+                                            <div class="ant-row css-m4timi">
+                                                <form style="width:600px"
+                                                    class="ant-form ant-form-horizontal css-m4timi">
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="use_nyquist_rate" class=""
+                                                                    title="Use Nyquist Rate">Use Nyquist Rate</label>
+                                                            </div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div id="use_nyquist_rate"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <label
+                                                                                class="ant-checkbox-wrapper ant-checkbox-wrapper-checked ant-checkbox-wrapper-in-form-item css-m4timi"><span
+                                                                                    class="ant-checkbox ant-wave-target css-m4timi ant-checkbox-checked"><input
+                                                                                        class="ant-checkbox-input"
+                                                                                        type="checkbox"
+                                                                                        checked="" /><span
+                                                                                        class="ant-checkbox-inner"></span></span><span>Calculate
+                                                                                    sampling frequency from
+                                                                                    bandwidth</span></label></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="bandwidth" class="ant-form-item-required"
+                                                                    title="Bandwidth">Bandwidth</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="1000" id="bandwidth"
+                                                                            aria-required="true"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number-group-wrapper ant-input-number-group-wrapper-outlined css-m4timi">
+                                                                                <div
+                                                                                    class="ant-input-number-wrapper ant-input-number-group css-m4timi">
+                                                                                    <div
+                                                                                        class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined">
+                                                                                        <div
+                                                                                            class="ant-input-number-handler-wrap">
+                                                                                            <span unselectable="on"
+                                                                                                role="button"
+                                                                                                aria-label="Increase Value"
+                                                                                                aria-disabled="false"
+                                                                                                class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="up"
+                                                                                                    class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="up"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span><span
+                                                                                                unselectable="on"
+                                                                                                role="button"
+                                                                                                aria-label="Decrease Value"
+                                                                                                aria-disabled="false"
+                                                                                                class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="down"
+                                                                                                    class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="down"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ant-input-number-input-wrap">
+                                                                                            <input autoComplete="off"
+                                                                                                role="spinbutton"
+                                                                                                aria-valuemin="1"
+                                                                                                aria-valuenow="1000"
+                                                                                                step="1"
+                                                                                                class="ant-input-number-input"
+                                                                                                value="1000" /></div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="ant-input-number-group-addon">
+                                                                                        <div class="ant-select ant-select-outlined css-m4timi ant-select-single ant-select-show-arrow"
+                                                                                            style="width:80px">
+                                                                                            <div
+                                                                                                class="ant-select-selector">
+                                                                                                <span
+                                                                                                    class="ant-select-selection-search"><input
+                                                                                                        type="search"
+                                                                                                        autoComplete="off"
+                                                                                                        class="ant-select-selection-search-input"
+                                                                                                        role="combobox"
+                                                                                                        aria-expanded="false"
+                                                                                                        aria-haspopup="listbox"
+                                                                                                        aria-owns="undefined_list"
+                                                                                                        aria-autocomplete="list"
+                                                                                                        aria-controls="undefined_list"
+                                                                                                        readOnly=""
+                                                                                                        unselectable="on"
+                                                                                                        style="opacity:0"
+                                                                                                        value="" /></span><span
+                                                                                                    class="ant-select-selection-item"
+                                                                                                    title="Hz">Hz</span>
+                                                                                            </div><span
+                                                                                                class="ant-select-arrow"
+                                                                                                style="user-select:none;-webkit-user-select:none"
+                                                                                                unselectable="on"
+                                                                                                aria-hidden="true"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="down"
+                                                                                                    class="anticon anticon-down ant-select-suffix"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="down"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="sampling_frequency" class=""
+                                                                    title="Sampling Frequncy">Sampling Frequncy</label>
+                                                            </div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="2000" id="sampling_frequency"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number-group-wrapper ant-input-number-group-wrapper-disabled ant-input-number-group-wrapper-outlined css-m4timi">
+                                                                                <div
+                                                                                    class="ant-input-number-wrapper ant-input-number-group css-m4timi">
+                                                                                    <div
+                                                                                        class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined ant-input-number-disabled">
+                                                                                        <div
+                                                                                            class="ant-input-number-handler-wrap">
+                                                                                            <span unselectable="on"
+                                                                                                role="button"
+                                                                                                aria-label="Increase Value"
+                                                                                                aria-disabled="false"
+                                                                                                class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="up"
+                                                                                                    class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="up"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span><span
+                                                                                                unselectable="on"
+                                                                                                role="button"
+                                                                                                aria-label="Decrease Value"
+                                                                                                aria-disabled="false"
+                                                                                                class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="down"
+                                                                                                    class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="down"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="ant-input-number-input-wrap">
+                                                                                            <input autoComplete="off"
+                                                                                                role="spinbutton"
+                                                                                                aria-valuemin="1"
+                                                                                                aria-valuenow="2000"
+                                                                                                step="1"
+                                                                                                class="ant-input-number-input"
+                                                                                                disabled=""
+                                                                                                value="2000" /></div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="ant-input-number-group-addon">
+                                                                                        <div class="ant-select ant-select-outlined css-m4timi ant-select-single ant-select-show-arrow"
+                                                                                            style="width:80px">
+                                                                                            <div
+                                                                                                class="ant-select-selector">
+                                                                                                <span
+                                                                                                    class="ant-select-selection-search"><input
+                                                                                                        type="search"
+                                                                                                        autoComplete="off"
+                                                                                                        class="ant-select-selection-search-input"
+                                                                                                        role="combobox"
+                                                                                                        aria-expanded="false"
+                                                                                                        aria-haspopup="listbox"
+                                                                                                        aria-owns="undefined_list"
+                                                                                                        aria-autocomplete="list"
+                                                                                                        aria-controls="undefined_list"
+                                                                                                        readOnly=""
+                                                                                                        unselectable="on"
+                                                                                                        style="opacity:0"
+                                                                                                        value="" /></span><span
+                                                                                                    class="ant-select-selection-item"
+                                                                                                    title="Hz">Hz</span>
+                                                                                            </div><span
+                                                                                                class="ant-select-arrow"
+                                                                                                style="user-select:none;-webkit-user-select:none"
+                                                                                                unselectable="on"
+                                                                                                aria-hidden="true"><span
+                                                                                                    role="img"
+                                                                                                    aria-label="down"
+                                                                                                    class="anticon anticon-down ant-select-suffix"><svg
+                                                                                                        viewBox="64 64 896 896"
+                                                                                                        focusable="false"
+                                                                                                        data-icon="down"
+                                                                                                        width="1em"
+                                                                                                        height="1em"
+                                                                                                        fill="currentColor"
+                                                                                                        aria-hidden="true">
+                                                                                                        <path
+                                                                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                        </path>
+                                                                                                    </svg></span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="quantization_levels" class=""
+                                                                    title="Enter Quantization Levels">Enter Quantization
+                                                                    Levels</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div id="quantization_levels"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <label
+                                                                                class="ant-checkbox-wrapper ant-checkbox-wrapper-checked ant-checkbox-wrapper-in-form-item css-m4timi"><span
+                                                                                    class="ant-checkbox ant-wave-target css-m4timi ant-checkbox-checked"><input
+                                                                                        class="ant-checkbox-input"
+                                                                                        type="checkbox"
+                                                                                        checked="" /><span
+                                                                                        class="ant-checkbox-inner"></span></span><span>Calculate
+                                                                                    quantization bits from
+                                                                                    levels</span></label></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="quantization_levels"
+                                                                    class="ant-form-item-required"
+                                                                    title="Quantization Levels">Quantization
+                                                                    Levels</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="8" id="quantization_levels"
+                                                                            aria-required="true"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined">
+                                                                                <div
+                                                                                    class="ant-input-number-handler-wrap">
+                                                                                    <span unselectable="on"
+                                                                                        role="button"
+                                                                                        aria-label="Increase Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                            role="img" aria-label="up"
+                                                                                            class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="up"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span><span
+                                                                                        unselectable="on" role="button"
+                                                                                        aria-label="Decrease Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                            role="img" aria-label="down"
+                                                                                            class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="down"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span></div>
+                                                                                <div
+                                                                                    class="ant-input-number-input-wrap">
+                                                                                    <input autoComplete="off"
+                                                                                        role="spinbutton"
+                                                                                        aria-valuemin="2"
+                                                                                        aria-valuenow="8" step="1"
+                                                                                        class="ant-input-number-input"
+                                                                                        value="8" /></div>
+                                                                            </div><span
+                                                                                style="margin-left:10px">level</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="quantization_bits" class=""
+                                                                    title="Quantization Bits Per Sample">Quantization
+                                                                    Bits Per Sample</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="3" id="quantization_bits"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined ant-input-number-disabled">
+                                                                                <div
+                                                                                    class="ant-input-number-handler-wrap">
+                                                                                    <span unselectable="on"
+                                                                                        role="button"
+                                                                                        aria-label="Increase Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                            role="img" aria-label="up"
+                                                                                            class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="up"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span><span
+                                                                                        unselectable="on" role="button"
+                                                                                        aria-label="Decrease Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                            role="img" aria-label="down"
+                                                                                            class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="down"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span></div>
+                                                                                <div
+                                                                                    class="ant-input-number-input-wrap">
+                                                                                    <input autoComplete="off"
+                                                                                        role="spinbutton"
+                                                                                        aria-valuemin="1"
+                                                                                        aria-valuenow="3" step="1"
+                                                                                        class="ant-input-number-input"
+                                                                                        disabled="" value="3" /></div>
+                                                                            </div><span style="margin-left:10px">
+                                                                                bits/sample</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="source_encoder_compression_rate"
+                                                                    class="ant-form-item-required"
+                                                                    title="Source Encoder Compression Rate">Source
+                                                                    Encoder Compression Rate</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="0.4"
+                                                                            id="source_encoder_compression_rate"
+                                                                            aria-required="true"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined">
+                                                                                <div
+                                                                                    class="ant-input-number-handler-wrap">
+                                                                                    <span unselectable="on"
+                                                                                        role="button"
+                                                                                        aria-label="Increase Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                            role="img" aria-label="up"
+                                                                                            class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="up"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span><span
+                                                                                        unselectable="on" role="button"
+                                                                                        aria-label="Decrease Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                            role="img" aria-label="down"
+                                                                                            class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="down"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span></div>
+                                                                                <div
+                                                                                    class="ant-input-number-input-wrap">
+                                                                                    <input autoComplete="off"
+                                                                                        role="spinbutton"
+                                                                                        aria-valuemin="0.001"
+                                                                                        aria-valuemax="1"
+                                                                                        aria-valuenow="0.4" step="0.01"
+                                                                                        class="ant-input-number-input"
+                                                                                        value="0.40" /></div>
+                                                                            </div><span style="margin-left:10px">
+                                                                                input/output</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-10 ant-form-item-label ant-form-item-label-left css-m4timi">
+                                                                <label for="channel_encoder_rate"
+                                                                    class="ant-form-item-required"
+                                                                    title="Channel Encoder Rate">Channel Encoder
+                                                                    Rate</label></div>
+                                                            <div
+                                                                class="ant-col ant-col-14 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <div value="0.8" id="channel_encoder_rate"
+                                                                            aria-required="true"
+                                                                            class="ant-row ant-row-middle css-m4timi">
+                                                                            <div
+                                                                                class="ant-input-number ant-input-number-in-form-item css-m4timi ant-input-number-outlined">
+                                                                                <div
+                                                                                    class="ant-input-number-handler-wrap">
+                                                                                    <span unselectable="on"
+                                                                                        role="button"
+                                                                                        aria-label="Increase Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-up"><span
+                                                                                            role="img" aria-label="up"
+                                                                                            class="anticon anticon-up ant-input-number-handler-up-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="up"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span><span
+                                                                                        unselectable="on" role="button"
+                                                                                        aria-label="Decrease Value"
+                                                                                        aria-disabled="false"
+                                                                                        class="ant-input-number-handler ant-input-number-handler-down"><span
+                                                                                            role="img" aria-label="down"
+                                                                                            class="anticon anticon-down ant-input-number-handler-down-inner"><svg
+                                                                                                viewBox="64 64 896 896"
+                                                                                                focusable="false"
+                                                                                                data-icon="down"
+                                                                                                width="1em" height="1em"
+                                                                                                fill="currentColor"
+                                                                                                aria-hidden="true">
+                                                                                                <path
+                                                                                                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                                </path>
+                                                                                            </svg></span></span></div>
+                                                                                <div
+                                                                                    class="ant-input-number-input-wrap">
+                                                                                    <input autoComplete="off"
+                                                                                        role="spinbutton"
+                                                                                        aria-valuemin="0.001"
+                                                                                        aria-valuemax="1"
+                                                                                        aria-valuenow="0.8" step="0.01"
+                                                                                        class="ant-input-number-input"
+                                                                                        value="0.80" /></div>
+                                                                            </div><span style="margin-left:10px">
+                                                                                output/input</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item css-m4timi">
+                                                        <div class="ant-row ant-form-item-row css-m4timi">
+                                                            <div
+                                                                class="ant-col ant-col-16 ant-col-offset-4 ant-form-item-control css-m4timi">
+                                                                <div class="ant-form-item-control-input">
+                                                                    <div class="ant-form-item-control-input-content">
+                                                                        <button type="submit"
+                                                                            class="ant-btn css-m4timi ant-btn-primary ant-btn-lg"><span
+                                                                                class="ant-btn-icon"><span role="img"
+                                                                                    aria-label="calculator"
+                                                                                    class="anticon anticon-calculator"><svg
+                                                                                        viewBox="64 64 896 896"
+                                                                                        focusable="false"
+                                                                                        data-icon="calculator"
+                                                                                        width="1em" height="1em"
+                                                                                        fill="currentColor"
+                                                                                        aria-hidden="true">
+                                                                                        <path
+                                                                                            d="M251.2 387H320v68.8c0 1.8 1.8 3.2 4 3.2h48c2.2 0 4-1.4 4-3.3V387h68.8c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H376v-68.8c0-1.8-1.8-3.2-4-3.2h-48c-2.2 0-4 1.4-4 3.2V331h-68.8c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm328 0h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 265h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm0 104h193.6c1.8 0 3.2-1.8 3.2-4v-48c0-2.2-1.4-4-3.3-4H579.2c-1.8 0-3.2 1.8-3.2 4v48c0 2.2 1.4 4 3.2 4zm-195.7-81l61.2-74.9c4.3-5.2.7-13.1-5.9-13.1H388c-2.3 0-4.5 1-5.9 2.9l-34 41.6-34-41.6a7.85 7.85 0 00-5.9-2.9h-50.9c-6.6 0-10.2 7.9-5.9 13.1l61.2 74.9-62.7 76.8c-4.4 5.2-.8 13.1 5.8 13.1h50.8c2.3 0 4.5-1 5.9-2.9l35.5-43.5 35.5 43.5c1.5 1.8 3.7 2.9 5.9 2.9h50.8c6.6 0 10.2-7.9 5.9-13.1L383.5 675zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-36 732H180V180h664v664z">
+                                                                                        </path>
+                                                                                    </svg></span></span><span>Submit</span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="ant-divider css-m4timi ant-divider-vertical"
+                                                    role="separator"></div>
+                                            </div>
+                                        </section>
+                                        <div class="ant-divider css-m4timi ant-divider-vertical" role="separator"></div>
+                                        <section>
+                                            <div class="ant-descriptions css-m4timi">
+                                                <div class="ant-descriptions-header">
+                                                    <div class="ant-descriptions-title">Results</div>
+                                                </div>
+                                                <div class="ant-descriptions-view">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr class="ant-descriptions-row">
+                                                                <td class="ant-descriptions-item" colSpan="2">
+                                                                    <div class="ant-descriptions-item-container"><span
+                                                                            class="ant-descriptions-item-content">Submit
+                                                                            the form to see the results</span></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center text-sm mt-12 text-gray-600">
+            <p>© 2024 Birzeit University, Ibraheem Alyan &amp; Adham Dar Al Masri</p>
+        </footer>
+    </main>
+    <script src="/calculator/wireless_systems/statics/_next/static/chunks/webpack-f975f47b3522e584.js"
+        async=""></script>
+    <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
+    <script>self.__next_f.push([1, "1:HL[\"/calculator/wireless_systems/statics/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/calculator/wireless_systems/statics/_next/static/css/6b894eb179a7507d.css\",\"style\"]\n"])</script>
+    <script>self.__next_f.push([1, "3:I[5751,[],\"\"]\n5:I[6513,[],\"ClientPageRoot\"]\n6:I[7877,[\"775\",\"static/chunks/775-f5a13855b4be3c19.js\",\"931\",\"static/chunks/app/page-a9d922b6dd23cfb4.js\"],\"default\"]\n7:I[9275,[],\"\"]\n8:I[1343,[],\"\"]\na:I[6130,[],\"\"]\nb:[]\n"])</script>
+    <script>self.__next_f.push([1, "0:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/calculator/wireless_systems/statics/_next/static/css/6b894eb179a7507d.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L3\",null,{\"buildId\":\"PZ63ufkoeC1izlk9kf0Nb\",\"assetPrefix\":\"/calculator/wireless_systems/statics\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L4\",[\"$\",\"$L5\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$6\"}]],null],null]},[[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__className_829c0e\",\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":null}]}]}],null],null],\"couldBeIntercepted\":false,\"initialHead\":[false,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]]\n"])</script>
+    <script>self.__next_f.push([1, "9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"Wireless Calculater\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Automatically calculate wireless communication parameters\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/calculator/wireless_systems/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n4:null\n"])</script>
+</body>
+
+</html>
