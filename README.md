@@ -1,6 +1,10 @@
 # Wireless Networks Online Calculator
 
-## Demo
+## Deployed Link
+
+https://www.ibraheemalyan.dev/calculator/wireless_systems/index.html
+
+## Video Demo
 
 https://github.com/ibraheemalayan/WirelessCommunicationsDesignOnlineCalculator/assets/35265448/a27f4ba2-3aa1-469d-be7c-c4a439ba4c3f
 
