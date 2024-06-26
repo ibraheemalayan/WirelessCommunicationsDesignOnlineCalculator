@@ -2,9 +2,7 @@
 
 ## Demo
 
-TODO: Add a link to the demo
-
-TODO: Add a lot of screenshots
+https://github.com/ibraheemalayan/WirelessCommunicationsDesignOnlineCalculator/assets/35265448/a27f4ba2-3aa1-469d-be7c-c4a439ba4c3f
 
 ## Installation
 
