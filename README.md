@@ -2,7 +2,7 @@
 
 ## Deployed Link
 
-https://www.ibraheemalyan.dev/calculator/wireless_systems/index.html
+https://www.ibraheemalayan.dev/calculator/wireless_systems/index.html
 
 ## Video Demo
 
